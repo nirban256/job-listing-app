@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import photosnap from '../assets/images/photosnap.svg';
 
 const JobList = () => {
 
@@ -7,7 +6,7 @@ const JobList = () => {
         {
             "id": 1,
             "company": "Photosnap",
-            "logo": "photosnap",
+            "logo": "images/photosnap.svg",
             "new": true,
             "featured": true,
             "position": "Senior Frontend Developer",
@@ -22,7 +21,7 @@ const JobList = () => {
         {
             "id": 2,
             "company": "Manage",
-            "logo": "./assets/images/manage.svg",
+            "logo": "images/manage.svg",
             "new": true,
             "featured": true,
             "position": "Fullstack Developer",
@@ -37,7 +36,7 @@ const JobList = () => {
         {
             "id": 3,
             "company": "Account",
-            "logo": "./assets/images/account.svg",
+            "logo": "images/account.svg",
             "new": true,
             "featured": false,
             "position": "Junior Frontend Developer",
@@ -52,7 +51,7 @@ const JobList = () => {
         {
             "id": 4,
             "company": "MyHome",
-            "logo": "./assets/images/myhome.svg",
+            "logo": "images/myhome.svg",
             "new": false,
             "featured": false,
             "position": "Junior Frontend Developer",
@@ -67,7 +66,7 @@ const JobList = () => {
         {
             "id": 5,
             "company": "Loop Studios",
-            "logo": "./assets/images/loop-studios.svg",
+            "logo": "images/loop-studios.svg",
             "new": false,
             "featured": false,
             "position": "Software Engineer",
@@ -82,7 +81,7 @@ const JobList = () => {
         {
             "id": 6,
             "company": "FaceIt",
-            "logo": "./assets/images/faceit.svg",
+            "logo": "images/faceit.svg",
             "new": false,
             "featured": false,
             "position": "Junior Backend Developer",
@@ -97,7 +96,7 @@ const JobList = () => {
         {
             "id": 7,
             "company": "Shortly",
-            "logo": "./assets/images/shortly.svg",
+            "logo": "images/shortly.svg",
             "new": false,
             "featured": false,
             "position": "Junior Developer",
@@ -112,7 +111,7 @@ const JobList = () => {
         {
             "id": 8,
             "company": "Insure",
-            "logo": "./assets/images/insure.svg",
+            "logo": "images/insure.svg",
             "new": false,
             "featured": false,
             "position": "Junior Frontend Developer",
@@ -127,7 +126,7 @@ const JobList = () => {
         {
             "id": 9,
             "company": "Eyecam Co.",
-            "logo": "./assets/images/eyecam-co.svg",
+            "logo": "images/eyecam-co.svg",
             "new": false,
             "featured": false,
             "position": "Full Stack Engineer",
@@ -142,7 +141,7 @@ const JobList = () => {
         {
             "id": 10,
             "company": "The Air Filter Company",
-            "logo": "../assets/images/the-air-filter-company.svg",
+            "logo": "images/the-air-filter-company.svg",
             "new": false,
             "featured": false,
             "position": "Front-end Dev",
@@ -160,10 +159,34 @@ const JobList = () => {
         <div>
             {jobs.map(job => (
                 <div className="job-container">
-                    <div className="company-logo">
-                        <img src={job.logo} alt="company-logo" />
+                    <div className="main">
+                        <div className="company-logo">
+                            <img src={job.logo} alt="company-logo" />
+                        </div>
+                        <div className="description">
+                            <div className="names">
+                                <span className="company-name">{job.company}</span>
+                                <span className="new">{job.new === true ? "NEW!" : ""}</span>
+                                <span className="featured">{job.featured === true ? "FEATURED" : ""}</span>
+                            </div>
+                            <div className="position">
+                                <h3>{job.position}</h3>
+                            </div>
+                            <div className="accessibility">
+                                <span className="post-time">{job.postedAt}</span>
+                                <span>&nbsp;•&nbsp;</span>
+                                <span className="contract">{job.contract}</span>
+                                <span>&nbsp;•&nbsp;</span>
+                                <span className="location">{job.location}</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <div className="filter">
+                        <span className="role">{job.role}</span>
+                        <span className="level">{job.level}</span>
+                        <span className="languages">{job.languages}</span>
+                    </div>
                 </div>
             ))}
         </div>

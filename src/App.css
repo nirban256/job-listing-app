@@ -16,11 +16,12 @@
 
 body{
     background-color: hsl(180, 52%, 96%);
+    overflow-x: hidden;
 }
 
 .header{
     width: 100vw;
     height: 25vh;
-    background-image: url(./assets/images/bg-header-desktop.svg);
+    background-image: url(../public/images/bg-header-desktop.svg);
     background-color: var(--primary-color);
 }
