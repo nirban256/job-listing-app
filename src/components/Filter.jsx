@@ -1,9 +1,22 @@
-import React from 'react'
+import React from 'react';
+import close from '../images/icon-remove.svg';
 
-const Filter = () => {
+const Filter = ({ keywords, removeKeywords, clearAll }) => {
     return (
-        <div>
-            <h1>Hello</h1>
+        <div className='filter-container'>
+            <ul>
+                {keywords.map((key, id) => {
+                    return (
+                        <li key={id}>
+                            {key}
+                            <button type="submit" className='close' onClick={() => removeKeywords()}>
+                                <img src={close} alt="close" />
+                            </button>
+                        </li>
+                    )
+                })}
+                <a href="/" onClick={() => clearAll()} >Clear</a>
+            </ul>
         </div>
     )
 }
