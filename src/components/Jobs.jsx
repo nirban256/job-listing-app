@@ -9,7 +9,7 @@ import insure from '../images/insure.svg';
 import eyecam from '../images/eyecam-co.svg';
 import airFilter from '../images/the-air-filter-company.svg';
 
-const jobs = [
+const Jobs = [
     {
         "id": 1,
         "company": "Photosnap",
@@ -162,4 +162,4 @@ const jobs = [
     }
 ];
 
-export default jobs;
+export default Jobs;

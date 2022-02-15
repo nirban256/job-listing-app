@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import JobList from './components/JobList';
 import './App.css';
 import Filter from './components/Filter';
 import jobs from './components/Jobs';
+import Main from './components/Main';
 
 const App = () => {
 
@@ -30,7 +30,7 @@ const App = () => {
           <Filter keywords={requireKeywords} removeKeywords={deleteRequireKeywords} clearAll={clearAllKeywords} />
         )}
       </div>
-      <JobList keywords={requireKeywords} jobs={jobs} setKeywords={addRequireKeywords} />
+      <Main keywords={requireKeywords} jobs={jobs} setKeywords={addRequireKeywords} />
     </div>
   );
 }
