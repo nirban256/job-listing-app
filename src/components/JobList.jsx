@@ -5,7 +5,7 @@ const JobList = ({ jobs, keywords, setKeywords }) => {
     return (
         <div>
             {jobs.map((j) => (
-                <div className="j-container">
+                <div className="jobs-container">
                     <div className="main">
                         <div className="company-logo">
                             <img src={j.logo} alt="company-logo" />
